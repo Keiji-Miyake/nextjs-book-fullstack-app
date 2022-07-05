@@ -9,7 +9,7 @@ const getSingleItem = async (req, res) => {
         console.log(req.query.id);
         const singleItem = await ItemModel.findById(req.query.id);
         return res.status(200).send({
-            message: "アイテム読み取り選考（シングル）",
+            message: "アイテム読み取り成功（シングル）",
             singleItem: singleItem
         });
     } catch (error) {

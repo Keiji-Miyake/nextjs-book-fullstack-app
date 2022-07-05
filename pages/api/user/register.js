@@ -1,0 +1,16 @@
+// /pages/api/user/register.js
+
+import connectDB from "../../../utils/database";
+import { UserModel } from "../../../utils/schemaModels";
+
+const registerUser = async (req, res) => {
+    try {
+        await connectDB();
+        await UserModel.create(req.body);
+        return res.status(200).json({ message: "ユーザ登録成功" });
+    } catch (error) {
+        return res.status(500).json({ message: "ユーザ登録失敗" });
+    }
+};
+
+export default registerUser;

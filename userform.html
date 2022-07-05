@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザでーて入力窓口</title>
+</head>
+<body>
+    <h1>ユーザーデータ入力窓口</h1>
+    <form action="http://localhost:3000/api/user/register" method="post">
+        <p>
+            <label for="name">名前:</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="age">メールアドレス:</label>
+            <input type="text" name="email" id="email">
+        </p>
+        <p>
+            <label for="password">パスワード:</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <p><button type="submit">投稿</button></p>
+    </form>
+</body>
+</html>
